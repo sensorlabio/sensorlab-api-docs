@@ -1,3 +1,6 @@
+User Signup
+~~~~~~~~~~~
+
 .. http:post:: /api/v1/users/signup
 
     **Request**:

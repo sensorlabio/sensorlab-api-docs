@@ -1,3 +1,6 @@
+Get last measurement for sensor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. http:get:: /api/v1/sensors/(id)/measurements/last
 
     **Request**:

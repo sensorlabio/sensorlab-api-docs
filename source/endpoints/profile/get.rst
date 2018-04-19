@@ -1,3 +1,6 @@
+Get profile
+~~~~~~~~~~~
+
 .. http:post:: /api/v1/profile
 
     :synopsis: Get user profile. This can also be used to check authorization token.

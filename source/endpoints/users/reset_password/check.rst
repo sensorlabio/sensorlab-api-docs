@@ -1,3 +1,6 @@
+Check reset password token
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. note::
     Use this endpoint to pre-check that token is correct before trying to reset password
 

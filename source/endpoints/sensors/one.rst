@@ -1,3 +1,6 @@
+Get single sensor
+~~~~~~~~~~~~~~~~~
+
 .. http:get:: /api/v1/sensors/(id)
 
     **Request**:

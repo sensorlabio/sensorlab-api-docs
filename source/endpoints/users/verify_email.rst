@@ -1,3 +1,6 @@
+Email Verification
+~~~~~~~~~~~~~~~~~~
+
 .. note::
         Upon user signup email will be sent to user with link to verify email address.
         This link will have "token" parameter. You can use this endpoint to verify email.

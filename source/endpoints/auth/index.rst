@@ -1,0 +1,6 @@
+Authentication endpoints
+------------------------
+
+.. toctree::
+
+    token

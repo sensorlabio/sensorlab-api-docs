@@ -1,3 +1,6 @@
+Get measurements for sensor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. http:get:: /api/v1/sensors/(id)/measurements
 
     **Request**:

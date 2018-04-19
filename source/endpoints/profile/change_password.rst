@@ -1,3 +1,6 @@
+Change password
+~~~~~~~~~~~~~~~
+
 .. http:post:: /api/v1/profile/change_password
 
     :synopsis: Change password for authenticated user.

@@ -1,3 +1,6 @@
+Get authentication token
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. http:post:: /api/v1/auth/token
 
     **Request**:

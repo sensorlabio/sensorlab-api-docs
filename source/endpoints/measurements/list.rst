@@ -1,3 +1,6 @@
+Get list of measurements
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. http:get:: /api/v1/measurements
 
     **Request**:

@@ -1,3 +1,6 @@
+Get sensors list
+~~~~~~~~~~~~~~~~
+
 .. http:get:: /api/v1/sensors
 
     **Request**:

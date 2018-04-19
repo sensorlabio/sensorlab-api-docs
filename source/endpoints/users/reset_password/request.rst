@@ -1,3 +1,6 @@
+Request password reset
+~~~~~~~~~~~~~~~~~~~~~~
+
 .. http:post:: /api/v1/users/reset_password/request
 
     **Request**:

@@ -1,3 +1,6 @@
+Get last measurement
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. http:get:: /api/v1/measurements/last
 
     **Request**:
