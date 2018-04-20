@@ -54,7 +54,7 @@ Request password reset
             "message": "There's no such user in the database"
         }
 
-    **oo much password request. Right now it's possible to request password reset 3 time an hour.**
+    **Too much password request. Right now it's possible to request password reset 3 time an hour.**
 
     .. sourcecode:: http
 
