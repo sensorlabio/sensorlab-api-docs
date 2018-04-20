@@ -29,7 +29,7 @@ Get measurements for sensor
                         6.263,
                         5.205
                     ],
-                    "recieved": "2017-05-27T06:46:55.733Z",
+                    "received": "2017-05-27T06:46:55.733Z",
                     "created": "2018-03-26T11:22:23.812Z",
                     "measurementgroup": "072b5d22-33d0-41e2-899f-a7c296f04edd"
                 },
@@ -42,7 +42,7 @@ Get measurements for sensor
                         7.688,
                         1.196
                     ],
-                    "recieved": "2018-01-12T09:31:19.804Z",
+                    "received": "2018-01-12T09:31:19.804Z",
                     "created": "2018-03-26T11:22:23.839Z",
                     "measurementgroup": "a0364248-e200-4f13-a5d0-29637f882b40"
                 },

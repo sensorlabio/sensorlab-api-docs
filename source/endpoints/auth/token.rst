@@ -31,7 +31,7 @@ Get authentication token
 
     .. sourcecode:: http
 
-        HTTP/1.1 200 OK
+        HTTP/1.1 401 Unauthorized
         Content-Type: text/plain
 
         Unauthorized
