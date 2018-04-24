@@ -11,7 +11,7 @@ Email Verification
 
     .. sourcecode:: http
 
-        POST /api/v1/sensors HTTP/1.1
+        POST /api/v1/users/verify_email HTTP/1.1
         Host: staging.sensorlab.io
         Accept: application/json
 
