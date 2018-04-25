@@ -50,6 +50,18 @@ Get sensors list
     :query name: filter by name. Search is case-insensitive and searches using `like`.
     :query imei: filter by imei. Will search by exact match.
     :query uniqueid: filter by uniqueid. Will search by exact match.
+    :query sort: sorting parameter.
+
+        You must provide string with sorting field name and sorting type like this:
+
+                `name,asc`
+
+        Available fields:
+                - `name` - sort by sensor name
+        Available sort types:
+                - `asc` - Ascending sort
+                - `desc` - Descending sort
+
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.
