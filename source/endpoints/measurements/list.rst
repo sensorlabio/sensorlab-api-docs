@@ -62,6 +62,20 @@ Get list of measurements
 
     :query page: used for pagination. Default is 1.
     :query type: filter by type.
+    :query sort: sorting parameter.
+
+        You must provide string with sorting field name and sorting type like this:
+
+                `type,asc`
+
+        Available fields:
+                - `created` - sort by creation date
+                - `type` - sort by measurement type
+                - `value` - sort by values. In this case it sorts by 3 values presented in order, so first value is always primary in this sorting.
+        Available sort types:
+                - `asc` - Ascending sort
+                - `desc` - Descending sort
+
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.
