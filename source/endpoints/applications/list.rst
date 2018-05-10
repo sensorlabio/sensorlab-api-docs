@@ -1,13 +1,13 @@
-Get sensors list
-~~~~~~~~~~~~~~~~
+Get list of applications
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. http:get:: /api/v1/sensors
+.. http:get:: /api/v1/applications
 
     **Request**:
 
     .. sourcecode:: http
 
-        GET /api/v1/sensors HTTP/1.1
+        GET /api/v1/applications HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
@@ -21,20 +21,21 @@ Get sensors list
         {
             "result": [
                 {
-                    "id": "5ab8b113fc10152c70cdeb65",
-                    "uniqueid": "93c55c3e-3ef4-4de6-9a8e-db5019b4a941",
-                    "imei": "863911091619316",
-                    "name": "Esta"
+                    "id": "5af2cb517a6af41a20707965",
+                    "name": "Sensors Application 1",
+                    "description": "",
+                    "created": "2018-05-09T10:20:01.352Z"
                 },
                 {
-                    "id": "5ab8b113fc10152c70cdeb66",
-                    "uniqueid": "876cc47b-5379-40de-83d0-10cf96720566",
-                    "imei": "980098461327809",
-                    "name": "Christelle"
+                    "id": "5af2cb4f7a6af41a20707964",
+                    "name": "Sensors Application 2",
+                    "description": "Application description",
+                    "created": "2018-05-09T10:19:59.363Z"
                 }
+                ...
             ],
-            "count": 200,
-            "pages": 4
+            "count": 27,
+            "pages": 1
         }
 
     **Unauthorized response**
@@ -46,22 +47,21 @@ Get sensors list
         Unauthorized
 
     :query page: used for pagination. Default is 1.
-    :query name: filter by name. Search is case-insensitive and searches using `like`.
-    :query imei: filter by imei. Will search by exact match.
-    :query uniqueid: filter by uniqueid. Will search by exact match.
+    :query name: search by name.
     :query sort: sorting parameter.
 
         You must provide string with sorting field name and sorting type like this:
 
-                `name,asc`
+                `type,asc`
 
         Available fields:
-                - `name` - sort by sensor name
+                - `name` - sort by creation date
+                - `created` - sort by measurement type
         Available sort types:
                 - `asc` - Ascending sort
                 - `desc` - Descending sort
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
-    :statuscode 200: No errors, will return result with sensors list.
+    :statuscode 200: No errors, will return result with applications list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.

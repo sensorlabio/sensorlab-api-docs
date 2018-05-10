@@ -9,14 +9,14 @@ Get last measurement
 
         GET /api/v1/measurements/last HTTP/1.1
         Host: staging.sensorlab.io
-        Accept: application/json
+        Content-type: application/json
 
     **Success response**:
 
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "id": "5ab8d7effa631a239c2b1ae7",
@@ -37,7 +37,6 @@ Get last measurement
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
-        Content-Type: text/plain
 
         Unauthorized
 

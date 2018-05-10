@@ -1,13 +1,13 @@
-Get single sensor
-~~~~~~~~~~~~~~~~~
+Delete application
+~~~~~~~~~~~~~~~~~~
 
-.. http:get:: /api/v1/sensors/(id)
+.. http:get:: /api/v1/applications/(id)
 
     **Request**:
 
     .. sourcecode:: http
 
-        GET /api/v1/sensors/5ab8b113fc10152c70cdeb65 HTTP/1.1
+        DELETE /api/v1/applications/5af1aa428a695630f4219713 HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
@@ -19,10 +19,9 @@ Get single sensor
         Content-type: application/json
 
         {
-            "id": "5ab8b113fc10152c70cdeb65",
-            "uniqueid": "93c55c3e-3ef4-4de6-9a8e-db5019b4a941",
-            "imei": "863911091619316",
-            "name": "Esta"
+            "success": true,
+            "code": 100,
+            "message": "Application deleted."
         }
 
     **Unauthorized response**
@@ -35,6 +34,8 @@ Get single sensor
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
-    :statuscode 200: No errors, will return result with sensors list.
+    :statuscode 200: No errors, will return result with applications list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
-    :statuscode 404: Sensor not found
+    :statuscode 404: Application not found
+
+.. note:: We don't actually delete any data, just hide it.

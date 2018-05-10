@@ -9,7 +9,7 @@ Request password reset
 
         POST /api/v1/users/reset_password/request HTTP/1.1
         Host: staging.sensorlab.io
-        Accept: application/json
+        Content-type: application/json
 
         {
           "email": "test@test.com"
@@ -20,7 +20,7 @@ Request password reset
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
           "success": true,
@@ -33,7 +33,7 @@ Request password reset
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,
@@ -46,7 +46,7 @@ Request password reset
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,
@@ -59,7 +59,7 @@ Request password reset
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,

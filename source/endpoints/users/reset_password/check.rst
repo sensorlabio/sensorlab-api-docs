@@ -12,7 +12,7 @@ Check reset password token
 
         POST /api/v1/users/reset_password/check HTTP/1.1
         Host: staging.sensorlab.io
-        Accept: application/json
+        Content-type: application/json
 
         {
           "token": "a19a7dbc5504d95775cf5caf17c71032fba7329facfb5a455cbf1326a57806f61569eb8b3912b1429387b04b5252f4a045839ac80319ef732c37f1f78870784b"
@@ -23,7 +23,7 @@ Check reset password token
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
           "success": true,
@@ -36,7 +36,7 @@ Check reset password token
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,
@@ -49,7 +49,7 @@ Check reset password token
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,

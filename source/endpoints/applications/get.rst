@@ -1,13 +1,13 @@
-Get single sensor
-~~~~~~~~~~~~~~~~~
+Get application
+~~~~~~~~~~~~~~~
 
-.. http:get:: /api/v1/sensors/(id)
+.. http:get:: /api/v1/applications/(id)
 
     **Request**:
 
     .. sourcecode:: http
 
-        GET /api/v1/sensors/5ab8b113fc10152c70cdeb65 HTTP/1.1
+        GET /api/v1/applications/5af1aa428a695630f4219713 HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
@@ -19,11 +19,11 @@ Get single sensor
         Content-type: application/json
 
         {
-            "id": "5ab8b113fc10152c70cdeb65",
-            "uniqueid": "93c55c3e-3ef4-4de6-9a8e-db5019b4a941",
-            "imei": "863911091619316",
-            "name": "Esta"
-        }
+            "id": "5af2cb517a6af41a20707965",
+            "name": "Sensors Application 1",
+            "description": "",
+            "created": "2018-05-09T10:20:01.352Z"
+         }
 
     **Unauthorized response**
 
@@ -35,6 +35,6 @@ Get single sensor
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
-    :statuscode 200: No errors, will return result with sensors list.
+    :statuscode 200: No errors, will return result with applications list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
-    :statuscode 404: Sensor not found
+    :statuscode 404: Application not found

@@ -11,7 +11,7 @@ Change password
 
         GET /api/v1/profile/change_password HTTP/1.1
         Host: staging.sensorlab.io
-        Accept: application/json
+        Content-type: application/json
 
         {
             "old_password": "old_password",
@@ -24,7 +24,7 @@ Change password
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": true,
@@ -37,7 +37,7 @@ Change password
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,
@@ -50,7 +50,7 @@ Change password
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,
@@ -63,7 +63,7 @@ Change password
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
            "success": false,
@@ -76,7 +76,7 @@ Change password
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
           "success": false,
@@ -90,7 +90,6 @@ Change password
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
-        Content-Type: text/plain
 
         Unauthorized
 

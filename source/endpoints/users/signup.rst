@@ -9,7 +9,7 @@ User Signup
 
         POST /api/v1/users/signup HTTP/1.1
         Host: staging.sensorlab.io
-        Accept: application/json
+        Content-type: application/json
 
         {
           "email": "test@email.com",
@@ -22,7 +22,7 @@ User Signup
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": true,
@@ -35,7 +35,7 @@ User Signup
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,
@@ -48,7 +48,7 @@ User Signup
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,
@@ -61,7 +61,7 @@ User Signup
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,
@@ -74,7 +74,7 @@ User Signup
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,
@@ -87,7 +87,7 @@ User Signup
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "success": false,

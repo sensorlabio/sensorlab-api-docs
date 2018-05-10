@@ -9,14 +9,14 @@ Get list of measurements
 
         GET /api/v1/measurements HTTP/1.1
         Host: staging.sensorlab.io
-        Accept: application/json
+        Content-type: application/json
 
     **Success response**:
 
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
             "result": [
@@ -56,7 +56,6 @@ Get list of measurements
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
-        Content-Type: text/plain
 
         Unauthorized
 

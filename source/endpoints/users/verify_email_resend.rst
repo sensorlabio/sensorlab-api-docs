@@ -13,7 +13,7 @@ Resend Email Verification
 
         POST /api/v1/users/verify_email/resend HTTP/1.1
         Host: staging.sensorlab.io
-        Accept: application/json
+        Content-type: application/json
 
         {
           "email": "test@email.com"
@@ -24,7 +24,7 @@ Resend Email Verification
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
           "success": true,
@@ -37,7 +37,7 @@ Resend Email Verification
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
           "success": false,
@@ -50,7 +50,7 @@ Resend Email Verification
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
           "success": false,
@@ -63,7 +63,7 @@ Resend Email Verification
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
           "success": false,
@@ -76,7 +76,7 @@ Resend Email Verification
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
           "success": false,
@@ -89,7 +89,7 @@ Resend Email Verification
     .. sourcecode:: http
 
         HTTP/1.1 200 OK
-        Content-Type: text/javascript
+        Content-type: application/json
 
         {
           "success": false,
