@@ -37,17 +37,24 @@ Update application
 
         Unauthorized
 
-    **Name field empty error response**
+    **Validation error response**
 
     .. sourcecode:: http
 
-        HTTP/1.1 200 OK
+        HTTP/1.1 422 OK
         Content-type: application/json
 
         {
             "success": false,
-            "code": 1,
-            "message": "Please, provide name field. This cannot be empty."
+            "code": 422,
+            "message": "There are validation errors found.",
+            "errors": [
+                {
+                    "code": 1,
+                    "message": "Please, provide name field. This cannot be empty.",
+                    "param": "name"
+                }
+            ]
         }
 
     :<json string name: Name for your application
@@ -57,4 +64,9 @@ Update application
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with applications list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
-    :statuscode 404: Application not found
+    :statuscode 404: Application not found.
+    :statuscode 422: Validation error.
+
+    **Possible validation errors and codes:**
+
+    - `code=1` - `Please, provide name field. This cannot be empty`.

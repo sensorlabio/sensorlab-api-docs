@@ -32,56 +32,31 @@ Change password
             "message": "New password is set for user."
         }
 
-    **Current password is not provided**:
+    **Validation error response**
 
     .. sourcecode:: http
-
-        HTTP/1.1 200 OK
-        Content-type: application/json
 
         {
             "success": false,
-            "code": 1,
-            "message": "Please, provide old password. This cannot be empty."
-        }
-
-    **Old password is incorrect**:
-
-    .. sourcecode:: http
-
-        HTTP/1.1 200 OK
-        Content-type: application/json
-
-        {
-            "success": false,
-            "code": 2,
-            "message": "Password is incorrect. Please provide you current password."
-        }
-
-    **New password or password check are not provided**:
-
-    .. sourcecode:: http
-
-        HTTP/1.1 200 OK
-        Content-type: application/json
-
-        {
-           "success": false,
-           "code": 3,
-           "message": "You must provide both \"new password\" and \"new password check\"."
-        }
-
-    **New Password and password check are not equal**:
-
-    .. sourcecode:: http
-
-        HTTP/1.1 200 OK
-        Content-type: application/json
-
-        {
-          "success": false,
-          "code": 4,
-          "message": "Both \"new password\" and \"new password check\" values must be equal."
+            "code": 422,
+            "message": "There are validation errors found.",
+            "errors": [
+                {
+                    "code": 1,
+                    "message": "Please, provide old password. This cannot be empty.",
+                    "param": "old_password"
+                },
+                {
+                    "code": 2,
+                    "message": "You must provide new password.",
+                    "param": "new_password"
+                },
+                {
+                    "code": 3,
+                    "message": "You must provide new password check.",
+                    "param": "new_password_check"
+                }
+            ]
         }
 
 
@@ -97,3 +72,12 @@ Change password
     :reqheader Content-Type: application/json
     :statuscode 200: No errors.
     :statuscode 401: Wrong authorization token
+    :statuscode 422: Validation error.
+
+    **Possible validation errors and codes:**
+
+    - `code=1` - `Please, provide name field. This cannot be empty`.
+    - `code=2` - `You must provide new password.`
+    - `code=3` - `You must provide new password check.`
+    - `code=4` - `Password is incorrect. Please provide you current password.`
+    - `code=5` - `Both "new password" and "new password check" values must be equal.`
