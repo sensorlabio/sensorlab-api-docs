@@ -27,9 +27,7 @@ Get last measurement
                 8.893,
                 9.414
             ],
-            "recieved": "2017-06-15T11:20:43.940Z",
-            "created": "2018-03-26T11:22:23.828Z",
-            "measurementgroup": "7b9dca62-47c2-488b-9ad2-66f394c43243"
+            "created": "2018-03-26T11:22:23.828Z"
         }
 
     **Unauthorized response**

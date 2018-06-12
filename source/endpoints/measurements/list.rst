@@ -29,9 +29,7 @@ Get list of measurements
                         4.037,
                         5.42
                     ],
-                    "recieved": "2017-11-04T05:32:26.348Z",
-                    "created": "2018-03-26T11:22:23.811Z",
-                    "measurementgroup": "d25a3495-791a-47a1-b647-cc164a88973b"
+                    "created": "2018-03-26T11:22:23.811Z"
                 },
                 {
                     "id": "5ab8d7effa631a239c2b1a50",
@@ -42,13 +40,11 @@ Get list of measurements
                         4.126,
                         4.535
                     ],
-                    "recieved": "2018-01-22T14:20:59.338Z",
-                    "created": "2018-03-26T11:22:23.811Z",
-                    "measurementgroup": "07f215ff-c3f2-47cc-84d2-dc67ae022859"
+                    "created": "2018-03-26T11:22:23.811Z"
                 },
             ],
-            "count": 1000,
-            "pages": 20
+            "next": "5b1e58bdf670201dd0272886",
+            "prev": null
         }
 
     **Unauthorized response**
@@ -59,23 +55,20 @@ Get list of measurements
 
         Unauthorized
 
-    :query page: used for pagination. Default is 1.
+    :jsonparam string next: Next measurement. Used for pagination.
+    :jsonparam string prev: Prev measurement. Used for pagination.
+
+    :query next: Use `next` or `prev` fields from response to get next or previous page.
     :query type: filter by type.
-    :query sort: sorting parameter.
-
-        You must provide string with sorting field name and sorting type like this:
-
-                `type,asc`
-
-        Available fields:
-                - `created` - sort by creation date
-                - `type` - sort by measurement type
-                - `value` - sort by values. In this case it sorts by 3 values presented in order, so first value is always primary in this sorting.
-        Available sort types:
-                - `asc` - Ascending sort
-                - `desc` - Descending sort
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
+
+    :statuscode 422: Validation error.
+
+        **Possible validation errors and codes:**
+
+        - `code=1` - `field=sensor_id` - `This is not correct id format.`.
+        - `code=2` - `field=next` - `This is not correct id format.`.
