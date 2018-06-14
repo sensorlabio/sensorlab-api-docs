@@ -22,7 +22,10 @@ Get single sensor
             "id": "5ab8b113fc10152c70cdeb65",
             "uniqueid": "93c55c3e-3ef4-4de6-9a8e-db5019b4a941",
             "imei": "863911091619316",
-            "name": "Esta"
+            "name": "Esta",
+            "batteryCharge": 6.7315,
+            "isBatteryCharging": false,
+            "isOnline": true
         }
 
     **Unauthorized response**
@@ -35,6 +38,15 @@ Get single sensor
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
+
+    :>json string id: Sensors's ID.
+    :>json string uniqueid: Sensor's Unique ID.
+    :>json string imei: Sensor's IMEI.
+    :>json string name: Sensor's name.
+    :>json number batteryCharge: Sensor's battery charge in percent.
+    :>json boolean isBatteryCharging: Indicates if battery is charging or not.
+    :>json boolean isOnline: Indicates if sensor is online and sending data or not.
+
     :statuscode 200: No errors, will return result with sensors list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
     :statuscode 404: Sensor not found
