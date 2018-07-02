@@ -203,9 +203,6 @@ b, strong {
 }
 
 .wy-nav-content {
-	background: -webkit-gradient(linear, left top, right top, from(#fff), to(#e7f0fc));
-	background: -webkit-linear-gradient(left, #fff, #e7f0fc);
-	background: linear-gradient(to right, #fff, #e7f0fc);
 	max-width: 100%;
 }
 
