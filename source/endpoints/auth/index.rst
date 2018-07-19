@@ -3,4 +3,5 @@ Authentication endpoints
 
 .. toctree::
 
-    token
+    user_token
+    application_token

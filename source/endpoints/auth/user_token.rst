@@ -1,13 +1,13 @@
-Get authentication token
-~~~~~~~~~~~~~~~~~~~~~~~~
+Get user authentication token
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. http:post:: /api/v1/auth/token
+.. http:post:: /api/v1/auth/user/token
 
     **Request**:
 
     .. sourcecode:: http
 
-        POST /api/v1/auth/token HTTP/1.1
+        POST /api/v1/auth/user/token HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
