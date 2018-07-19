@@ -1,20 +1,15 @@
-Create application
-~~~~~~~~~~~~~~~~~~
+Generate new Private Api Key for application
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. http:post:: /api/v1/applications
+.. http:post:: /api/v1/applications/(id)/private_api_key/generate
 
     **Request**:
 
     .. sourcecode:: http
 
-        POST /api/v1/applications HTTP/1.1
+        POST /api/v1/applications/5af1aa428a695630f4219713/private_api_key/generate HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
-
-        {
-            "name": "Application Name",
-            "description": "Application Description"
-        }
 
     **Success response**:
 
@@ -44,44 +39,20 @@ Create application
 
         Unauthorized
 
-    **Validation error response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 422 OK
-        Content-type: application/json
-
-        {
-            "success": false,
-            "code": 422,
-            "message": "There are validation errors found.",
-            "errors": [
-                {
-                    "code": 1,
-                    "message": "Please, provide name field. This cannot be empty.",
-                    "param": "name"
-                }
-            ]
-        }
-
-    :<json string name: Name for your application
-    :<json string description: Description for your application
-
     :>json object application: Application data.
     :>json string application.id: Application ID.
     :>json string application.name: Application name.
     :>json string application.description: Application description.
     :>json string application.public_api_key: Public API key.
     :>json string application.private_api_key: Generated private API key.
-        Please note, that Private API Key will appear only once after app creation.
-        You will be able to generate new one though.
+            Please note, that Private API Key will appear only once after app creation.
+            You will be able to generate new one though.
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with applications list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
     :statuscode 422: Validation error.
-
 
     **Possible validation errors and codes:**
 

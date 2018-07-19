@@ -24,15 +24,16 @@ Get list of applications
                     "id": "5af2cb517a6af41a20707965",
                     "name": "Sensors Application 1",
                     "description": "",
-                    "created": "2018-05-09T10:20:01.352Z"
+                    "created": "2018-05-09T10:20:01.352Z",
+                    "public_api_key": "sensorlab:application:62fa02f38ff6100dbbd1cdff2339ccf3",
                 },
                 {
                     "id": "5af2cb4f7a6af41a20707964",
                     "name": "Sensors Application 2",
                     "description": "Application description",
-                    "created": "2018-05-09T10:19:59.363Z"
+                    "created": "2018-05-09T10:19:59.363Z",
+                    "public_api_key": "sensorlab:application:cc7fddc2434a1773a360c84b1be71b16"
                 }
-                ...
             ],
             "count": 27,
             "pages": 1
@@ -63,5 +64,11 @@ Get list of applications
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
+
+    :>json string id: Application ID.
+    :>json string name: Application name.
+    :>json string description: Application description.
+    :>json string public_api_key: Public API key.
+
     :statuscode 200: No errors, will return result with applications list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.

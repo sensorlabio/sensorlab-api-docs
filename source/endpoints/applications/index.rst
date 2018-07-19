@@ -8,3 +8,4 @@ Applications endpoints
     create
     update
     delete
+    generate_api_key
