@@ -5,5 +5,6 @@ Sensors Endpoints
 
     list
     one
+    update
     measurements/list
     measurements/last
