@@ -25,6 +25,7 @@ Get sensors list
                     "uniqueid": "93c55c3e-3ef4-4de6-9a8e-db5019b4a941",
                     "imei": "863911091619316",
                     "name": "Esta",
+                    "application": "5b4f3e3d8ef5ae0a1473e1da",
                     "batteryCharge": 27.7169,
                     "isBatteryCharging": false,
                     "isOnline": true
@@ -34,6 +35,7 @@ Get sensors list
                     "uniqueid": "876cc47b-5379-40de-83d0-10cf96720566",
                     "imei": "980098461327809",
                     "name": "Christelle",
+                    "application": "5b4f3e3d8ef5ae0a1473e1da",
                     "batteryCharge": 6.7315,
                     "isBatteryCharging": false,
                     "isOnline": true
@@ -55,6 +57,7 @@ Get sensors list
     :>json string uniqueid: Sensor's Unique ID.
     :>json string imei: Sensor's IMEI.
     :>json string name: Sensor's name.
+    :>json string application: Application ID sensor is connected to.
     :>json number batteryCharge: Sensor's battery charge in percent.
     :>json boolean isBatteryCharging: Indicates if battery is charging or not.
     :>json boolean isOnline: Indicates if sensor is online and sending data or not.
