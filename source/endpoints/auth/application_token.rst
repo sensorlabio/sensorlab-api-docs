@@ -12,8 +12,8 @@ Get application authentication token
         Content-type: application/json
 
         {
-          "public_api_key": "sensorlab:application:62fa02f38ff6100dbbd1cdff2339ccf3"
-          "private_api_key": "9a57d7e74ead4ec610539dcf5124db0d",
+          "public_api_key": "sensorlab:application:62fa02f38ff6100dbbd1cdff2339ccf3",
+          "private_api_key": "9a57d7e74ead4ec610539dcf5124db0d"
         }
 
     **Success response**:
@@ -39,3 +39,5 @@ Get application authentication token
     :reqheader Content-Type: application/json
     :statuscode 200: No errors.
     :statuscode 401: Wrong authorization credentials
+
+.. note:: Not every endpoint is available for application token. You will find more information in the endpoint description itself.

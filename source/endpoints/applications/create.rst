@@ -86,3 +86,8 @@ Create application
     **Possible validation errors and codes:**
 
     - `code=1` - `Please, provide name field. This cannot be empty`.
+
+.. note::
+    Available for:
+
+    - User token

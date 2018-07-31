@@ -7,7 +7,7 @@ Get list of measurements
 
     .. sourcecode:: http
 
-        GET /api/v1/measurements HTTP/1.1
+        GET /api/v1/measurements?sensor_id=5ab8b113fc10152c70cdeb65 HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
@@ -58,6 +58,7 @@ Get list of measurements
     :jsonparam string next: Next measurement. Used for pagination.
     :jsonparam string prev: Prev measurement. Used for pagination.
 
+    :query sensor_id: Sensor's ID.
     :query next: Use `next` or `prev` fields from response to get next or previous page.
     :query type: filter by type.
 
@@ -70,5 +71,14 @@ Get list of measurements
 
         **Possible validation errors and codes:**
 
-        - `code=1` - `field=sensor_id` - `This is not correct id format.`.
-        - `code=2` - `field=next` - `This is not correct id format.`.
+        - `code=1` - `field=sensor_id` - `Please, provide sensor field. This cannot be empty.`.
+        - `code=2` - `field=sensor_id` - `This is not correct id format.`.
+        - `code=3` - `field=next` - `This is not correct id format.`.
+
+.. note::
+    Available for:
+
+    - User token
+    - Application token
+
+    Application token will have access only to measurements of sensors assigned to this application.

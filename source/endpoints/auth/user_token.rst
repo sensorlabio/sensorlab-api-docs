@@ -12,8 +12,8 @@ Get user authentication token
         Content-type: application/json
 
         {
-          "email": "test@email.com"
-          "password": "password",
+          "email": "test@email.com",
+          "password": "password"
         }
 
     **Success response**:
@@ -39,3 +39,5 @@ Get user authentication token
     :reqheader Content-Type: application/json
     :statuscode 200: No errors.
     :statuscode 401: Wrong authorization credentials
+
+.. note:: Not every endpoint is available for application token. You will find more information in the endpoint description itself.

@@ -39,3 +39,8 @@ Delete application
     :statuscode 404: Application not found
 
 .. note:: We don't actually delete any data, just hide it.
+
+.. note::
+    Available for:
+
+    - User token

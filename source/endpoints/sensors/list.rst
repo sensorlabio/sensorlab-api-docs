@@ -85,3 +85,11 @@ Get sensors list
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
+
+.. note::
+    Available for:
+
+    - User token
+    - Application token
+
+    Application token will have access only to sensors assigned to this application.

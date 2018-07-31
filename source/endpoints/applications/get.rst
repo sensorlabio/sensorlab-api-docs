@@ -45,3 +45,8 @@ Get application
     :statuscode 200: No errors, will return result with applications list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
     :statuscode 404: Application not found
+
+.. note::
+    Available for:
+
+    - User token

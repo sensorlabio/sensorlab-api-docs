@@ -72,3 +72,9 @@ Get list of applications
 
     :statuscode 200: No errors, will return result with applications list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
+
+
+.. note::
+    Available for:
+
+    - User token

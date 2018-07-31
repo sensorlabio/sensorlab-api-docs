@@ -72,3 +72,11 @@ Get measurements for sensor
 
         - `code=1` - `field=sensor_id` - `This is not correct id format.`.
         - `code=2` - `field=next` - `This is not correct id format.`.
+
+.. note::
+    Available for:
+
+    - User token
+    - Application token
+
+    Application token will have access only to measurements of sensors assigned to this application.

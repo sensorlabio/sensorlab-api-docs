@@ -4,7 +4,7 @@ Sensors Endpoints
 .. toctree::
 
     list
-    one
+    get
     update
     measurements/list
     measurements/last

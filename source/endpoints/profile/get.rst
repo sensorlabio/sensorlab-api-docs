@@ -36,3 +36,8 @@ Get profile
     :reqheader Content-Type: application/json
     :statuscode 200: No errors.
     :statuscode 401: Wrong authorization token
+
+.. note::
+    Available for:
+
+    - User token

@@ -81,3 +81,8 @@ Change password
     - `code=3` - `You must provide new password check.`
     - `code=4` - `Password is incorrect. Please provide you current password.`
     - `code=5` - `Both "new password" and "new password check" values must be equal.`
+
+.. note::
+    Available for:
+
+    - User token
