@@ -7,7 +7,7 @@ Generate new Private Api Key for application
 
     .. sourcecode:: http
 
-        POST /api/v1/applications/5af1aa428a695630f4219713/private_api_key/generate HTTP/1.1
+        POST /api/v1/applications/d8d7f14a-9a16-11e8-9eb6-529269fb1459/private_api_key/generate HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
@@ -23,7 +23,7 @@ Generate new Private Api Key for application
             "code": 100,
             "message": "Application created.",
             "application": {
-                "id": "5af404d28109aa2c846cd008",
+                "id": "d8d7f14a-9a16-11e8-9eb6-529269fb1459",
                 "name": "Application Name",
                 "description": "Application Description",
                 "public_api_key": "sensorlab:application:62fa02f38ff6100dbbd1cdff2339ccf3",

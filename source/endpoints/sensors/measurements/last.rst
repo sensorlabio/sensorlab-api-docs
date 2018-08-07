@@ -19,15 +19,13 @@ Get last measurement for sensor
         Content-Type: text/javascript
 
         {
-            "id": "5ab8d7effa631a239c2b1ae7",
-            "sensor": "5ab8b113fc10152c70cdebbb",
             "type": "UDX",
             "value": [
                 6.625,
                 8.893,
                 9.414
             ],
-            "created": "2018-03-26T11:22:23.828Z"
+            "timestamp": 1533627864
         }
 
     **Unauthorized response**
@@ -40,6 +38,11 @@ Get last measurement for sensor
         Unauthorized
 
     :query type: filter by type.
+
+    :>json string type: Measurement type.
+    :>json string value: Array of values.
+    :>json string timestamp: Timestamp for measurement.
+
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.

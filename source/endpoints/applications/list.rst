@@ -21,14 +21,14 @@ Get list of applications
         {
             "result": [
                 {
-                    "id": "5af2cb517a6af41a20707965",
+                    "id": "d8d7f14a-9a16-11e8-9eb6-529269fb1459",
                     "name": "Sensors Application 1",
                     "description": "",
                     "created": "2018-05-09T10:20:01.352Z",
                     "public_api_key": "sensorlab:application:62fa02f38ff6100dbbd1cdff2339ccf3",
                 },
                 {
-                    "id": "5af2cb4f7a6af41a20707964",
+                    "id": "f6ca0a08-9a16-11e8-9eb6-529269fb1459",
                     "name": "Sensors Application 2",
                     "description": "Application description",
                     "created": "2018-05-09T10:19:59.363Z",

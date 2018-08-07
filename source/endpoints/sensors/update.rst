@@ -7,13 +7,13 @@ Update sensor
 
     .. sourcecode:: http
 
-        PATCH /api/v1/sensors/5ab8b113fc10152c70cdeb65 HTTP/1.1
+        PATCH /api/v1/sensors/acdfab8a-9a18-11e8-9eb6-529269fb1459 HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
         {
             "name": "Updated Sensor ID",
-            "application": "5b4f3e3d8ef5ae0a1473e1da"
+            "application": "b2a2fdb0-9a18-11e8-9eb6-529269fb1459"
         }
 
     **Success response**:

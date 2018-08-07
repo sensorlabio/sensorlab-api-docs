@@ -21,21 +21,19 @@ Get sensors list
         {
             "result": [
                 {
-                    "id": "5ab8b113fc10152c70cdeb65",
-                    "uniqueid": "93c55c3e-3ef4-4de6-9a8e-db5019b4a941",
+                    "id": "8dbc5460-9a18-11e8-9eb6-529269fb1459",
                     "imei": "863911091619316",
                     "name": "Esta",
-                    "application": "5b4f3e3d8ef5ae0a1473e1da",
+                    "application": "9c5b5c32-9a18-11e8-9eb6-529269fb1459",
                     "batteryCharge": 27.7169,
                     "isBatteryCharging": false,
                     "isOnline": true
                 },
                 {
-                    "id": "5ab8b113fc10152c70cdeb66",
-                    "uniqueid": "876cc47b-5379-40de-83d0-10cf96720566",
+                    "id": "876cc47b-5379-40de-83d0-10cf96720566",
                     "imei": "980098461327809",
                     "name": "Christelle",
-                    "application": "5b4f3e3d8ef5ae0a1473e1da",
+                    "application": "9c5b5fde-9a18-11e8-9eb6-529269fb1459",
                     "batteryCharge": 6.7315,
                     "isBatteryCharging": false,
                     "isOnline": true
@@ -54,7 +52,6 @@ Get sensors list
         Unauthorized
 
     :>json string id: Sensors's ID.
-    :>json string uniqueid: Sensor's Unique ID.
     :>json string imei: Sensor's IMEI.
     :>json string name: Sensor's name.
     :>json string application: Application ID sensor is connected to.

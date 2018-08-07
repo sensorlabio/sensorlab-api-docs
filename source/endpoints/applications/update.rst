@@ -7,7 +7,7 @@ Update application
 
     .. sourcecode:: http
 
-        PATCH /api/v1/applications/5af1aa428a695630f4219713 HTTP/1.1
+        PATCH /api/v1/applications/f6ca0a08-9a16-11e8-9eb6-529269fb1459 HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 

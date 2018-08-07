@@ -7,7 +7,7 @@ Get measurements for sensor
 
     .. sourcecode:: http
 
-        GET /api/v1/sensors/5ab8b113fc10152c70cdeb65/measurements HTTP/1.1
+        GET /api/v1/sensors/4634da2c-9a18-11e8-9eb6-529269fb1459/measurements HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
@@ -21,29 +21,25 @@ Get measurements for sensor
         {
             "result": [
                 {
-                    "id": "5ab8d7effa631a239c2b1a58",
-                    "sensor": "5ab8b113fc10152c70cdeb65",
-                    "type": "CZE",
+                    "type": "KVF",
                     "value": [
-                        2.718,
-                        6.263,
-                        5.205
+                        3.896,
+                        4.037,
+                        5.42
                     ],
-                    "created": "2018-03-26T11:22:23.812Z"
+                    "timestamp": "1533627864"
                 },
                 {
-                    "id": "5ab8d7effa631a239c2b1b6d",
-                    "sensor": "5ab8b113fc10152c70cdeb65",
-                    "type": "VJK",
+                    "type": "TTA",
                     "value": [
-                        7.953,
-                        7.688,
-                        1.196
+                        4.465,
+                        4.126,
+                        4.535
                     ],
-                    "created": "2018-03-26T11:22:23.839Z"
+                    "timestamp": "1533627865"
                 },
             ],
-            "next": "5b1e58bdf670201dd0272886",
+            "next": "d438a4b2-9a17-11e8-9eb6-529269fb1459",
             "prev": null
         }
 
@@ -55,11 +51,15 @@ Get measurements for sensor
 
         Unauthorized
 
-    :jsonparam string next: Next measurement. Used for pagination.
-    :jsonparam string prev: Prev measurement. Used for pagination.
-
     :query next: Use `next` or `prev` fields from response to get next or previous page.
     :query type: filter by type.
+
+    :>json string result.type: Measurement type.
+    :>json string result.value: Array of values.
+    :>json string result.timestamp: Timestamp for measurement.
+    :>json string next: This param shows next measurement ID for next page. Use it with `next` query parameter.
+    :>json string prev: This param shows prev measurement ID for prev page. Use it with `next` query parameter.
+
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json

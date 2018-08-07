@@ -28,7 +28,7 @@ Create application
             "code": 100,
             "message": "Application created.",
             "application": {
-                "id": "5af404d28109aa2c846cd008",
+                "id": "7e970572-9a16-11e8-9eb6-529269fb1459",
                 "name": "Application Name",
                 "description": "Application Description",
                 "public_api_key": "sensorlab:application:62fa02f38ff6100dbbd1cdff2339ccf3",

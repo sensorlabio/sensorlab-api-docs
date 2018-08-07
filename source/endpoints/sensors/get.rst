@@ -7,7 +7,7 @@ Get single sensor
 
     .. sourcecode:: http
 
-        GET /api/v1/sensors/5ab8b113fc10152c70cdeb65 HTTP/1.1
+        GET /api/v1/sensors/7765e032-9a18-11e8-9eb6-529269fb1459 HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
@@ -19,11 +19,10 @@ Get single sensor
         Content-type: application/json
 
         {
-            "id": "5ab8b113fc10152c70cdeb65",
-            "uniqueid": "93c55c3e-3ef4-4de6-9a8e-db5019b4a941",
+            "id": "7765e032-9a18-11e8-9eb6-529269fb1459",
             "imei": "863911091619316",
             "name": "Esta",
-            "application": "5b4f3e3d8ef5ae0a1473e1da",
+            "application": "8078b94c-9a18-11e8-9eb6-529269fb1459",
             "batteryCharge": 6.7315,
             "isBatteryCharging": false,
             "isOnline": true
@@ -41,7 +40,6 @@ Get single sensor
     :reqheader Content-Type: application/json
 
     :>json string id: Sensors's ID.
-    :>json string uniqueid: Sensor's Unique ID.
     :>json string imei: Sensor's IMEI.
     :>json string name: Sensor's name.
     :>json string application: Application ID sensor is connected to.

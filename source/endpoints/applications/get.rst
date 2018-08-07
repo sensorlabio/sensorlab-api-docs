@@ -7,7 +7,7 @@ Get application
 
     .. sourcecode:: http
 
-        GET /api/v1/applications/5af1aa428a695630f4219713 HTTP/1.1
+        GET /api/v1/applications/d8d7f14a-9a16-11e8-9eb6-529269fb1459 HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
@@ -19,9 +19,9 @@ Get application
         Content-type: application/json
 
         {
-            "id": "5af2cb517a6af41a20707965",
-            "name": "Sensors Application 1",
-            "description": "",
+            "id": "d8d7f14a-9a16-11e8-9eb6-529269fb1459",
+            "name": "Sensors Application",
+            "description": "Sensor Description",
             "created": "2018-05-09T10:20:01.352Z",
             "public_api_key": "sensorlab:application:62fa02f38ff6100dbbd1cdff2339ccf3"
          }

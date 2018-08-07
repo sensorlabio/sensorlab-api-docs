@@ -21,29 +21,25 @@ Get list of measurements
         {
             "result": [
                 {
-                    "id": "5ab8d7effa631a239c2b1a4c",
-                    "sensor": "5ab8b113fc10152c70cdebbd",
                     "type": "KVF",
                     "value": [
                         3.896,
                         4.037,
                         5.42
                     ],
-                    "created": "2018-03-26T11:22:23.811Z"
+                    "timestamp": "1533627864"
                 },
                 {
-                    "id": "5ab8d7effa631a239c2b1a50",
-                    "sensor": "5ab8b113fc10152c70cdebce",
                     "type": "TTA",
                     "value": [
                         4.465,
                         4.126,
                         4.535
                     ],
-                    "created": "2018-03-26T11:22:23.811Z"
+                    "timestamp": "1533627865"
                 },
             ],
-            "next": "5b1e58bdf670201dd0272886",
+            "next": "d438a4b2-9a17-11e8-9eb6-529269fb1459",
             "prev": null
         }
 
@@ -55,12 +51,15 @@ Get list of measurements
 
         Unauthorized
 
-    :jsonparam string next: Next measurement. Used for pagination.
-    :jsonparam string prev: Prev measurement. Used for pagination.
-
     :query sensor_id: Sensor's ID.
     :query next: Use `next` or `prev` fields from response to get next or previous page.
     :query type: filter by type.
+
+    :>json string result.type: Measurement type.
+    :>json string result.value: Array of values.
+    :>json string result.timestamp: Timestamp for measurement.
+    :>json string next: This param shows next measurement ID for next page. Use it with `next` query parameter.
+    :>json string prev: This param shows prev measurement ID for prev page. Use it with `next` query parameter.
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json

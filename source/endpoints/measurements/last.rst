@@ -7,7 +7,7 @@ Get last measurement
 
     .. sourcecode:: http
 
-        GET /api/v1/measurements/last?sensor_id=5ab8b113fc10152c70cdeb65 HTTP/1.1
+        GET /api/v1/measurements/last?sensor_id=11e34426-9a17-11e8-9eb6-529269fb1459 HTTP/1.1
         Host: staging.sensorlab.io
         Content-type: application/json
 
@@ -19,15 +19,13 @@ Get last measurement
         Content-type: application/json
 
         {
-            "id": "5ab8d7effa631a239c2b1ae7",
-            "sensor": "5ab8b113fc10152c70cdebbb",
             "type": "UDX",
             "value": [
                 6.625,
                 8.893,
                 9.414
             ],
-            "created": "2018-03-26T11:22:23.828Z"
+            "timestamp": 1533627864
         }
 
     **Unauthorized response**
@@ -40,8 +38,12 @@ Get last measurement
 
 
     :query sensor_id: Sensor's ID.
-
     :query type: filter by type.
+
+    :>json string type: Measurement type.
+    :>json string value: Array of values.
+    :>json string timestamp: Timestamp for measurement.
+
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.
