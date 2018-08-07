@@ -62,7 +62,7 @@ Get sensors list
     :query page: used for pagination. Default is 1.
     :query name: filter by name. Search is case-insensitive and searches using `like`.
     :query imei: filter by imei. Will search by exact match.
-    :query uniqueid: filter by uniqueid. Will search by exact match.
+    :query id: filter by id. Will search by exact match.
     :query online_status: pass "online" to search for online sensors or "offline" for offline sensors.
     :query battery_charge_min: filter sensors by battery charge
     :query battery_charge_max: filter sensors by battery charge
