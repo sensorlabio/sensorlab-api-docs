@@ -82,6 +82,16 @@ Get sensors list
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
+    :statuscode 422: Validation error.
+
+    **Possible validation errors and codes:**
+
+    - code=1 - Sensor ID is incorrect.
+    - code=2 - `online_status` parameter must be `online` or `offline`.
+    - code=3 - `battery_charge_min` must be an integer.
+    - code=4 - `battery_charge_max` must be an integer.
+    - code=5 - `battery_charge_max` should not be less than `battery_charge_min`.
+    - code=6 - `page` must be an integer.
 
 .. note::
     Available for:
