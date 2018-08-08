@@ -50,6 +50,7 @@ Get list of applications
     :query page: used for pagination. Default is 1.
     :query name: search by name.
     :query sort: sorting parameter.
+    :query show_deleted: if `true` - show deleted only applications.
 
         You must provide string with sorting field name and sorting type like this:
 
@@ -72,7 +73,12 @@ Get list of applications
 
     :statuscode 200: No errors, will return result with applications list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
+    :statuscode 422: Validation error.
 
+    **Possible validation errors and codes:**
+
+    - code=1 - Show deleted should be boolean - `true` or `false`
+    - code=2 - `page` must be an integer
 
 .. note::
     Available for:
