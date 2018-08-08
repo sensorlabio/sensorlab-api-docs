@@ -86,12 +86,13 @@ Get sensors list
 
     **Possible validation errors and codes:**
 
-    - code=1 - Sensor ID is incorrect.
-    - code=2 - `online_status` parameter must be `online` or `offline`.
-    - code=3 - `battery_charge_min` must be an integer.
-    - code=4 - `battery_charge_max` must be an integer.
-    - code=5 - `battery_charge_max` should not be less than `battery_charge_min`.
-    - code=6 - `page` must be an integer.
+    - code=1 - Sensor must be correct UUID format
+    - code=2 - `online_status` parameter must be `online` or `offline`
+    - code=3 - `battery_charge_min` must be an integer
+    - code=4 - `battery_charge_max` must be an integer
+    - code=5 - `battery_charge_max` should not be less than `battery_charge_min`
+    - code=6 - `page` must be an integer
+    - code=7 - `next` must be correct UUID format
 
 .. note::
     Available for:
