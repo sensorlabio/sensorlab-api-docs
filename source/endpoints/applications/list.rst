@@ -77,8 +77,7 @@ Get list of applications
 
     **Possible validation errors and codes:**
 
-    - code=1 - Show deleted should be boolean - `true` or `false`
-    - code=2 - `page` must be an integer
+    - code=1 - `page` must be an integer
 
 .. note::
     Available for:
