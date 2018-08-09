@@ -59,6 +59,8 @@ Get measurements for sensor
     :>json string result.timestamp: Timestamp for measurement.
     :>json string next: This param shows next measurement ID for next page. Use it with `next` query parameter.
     :>json string prev: This param shows prev measurement ID for prev page. Use it with `next` query parameter.
+    :>json string timestamp_start: Filter by timestamp range.
+    :>json string timestamp_stop: Filter by timestamp range.
 
 
     :reqheader Authorization: Bearer token from authentication.
@@ -69,7 +71,7 @@ Get measurements for sensor
     :statuscode 422: Validation error.
 
     **Possible validation errors and codes:**
- 
+
         - code=2 - field=sensor_id - This is not correct id format
         - code=3 - field=next - This is not correct id format
         - code=4 - field=timestamp_start - `timestamp_start` should be correct unix timestamp format
