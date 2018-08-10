@@ -25,7 +25,8 @@ Get single sensor
             "application": "8078b94c-9a18-11e8-9eb6-529269fb1459",
             "batteryCharge": 6.7315,
             "isBatteryCharging": false,
-            "isOnline": true
+            "isOnline": true,
+            "is_public": false,
         }
 
     **Unauthorized response**
@@ -46,7 +47,7 @@ Get single sensor
     :>json number batteryCharge: Sensor's battery charge in percent.
     :>json boolean isBatteryCharging: Indicates if battery is charging or not.
     :>json boolean isOnline: Indicates if sensor is online and sending data or not.
-    :>json boolean is_public: Show is sensor is public or not.
+    :>json boolean is_public: Show if sensor is public or not.
 
     :statuscode 200: No errors, will return result with sensors list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
