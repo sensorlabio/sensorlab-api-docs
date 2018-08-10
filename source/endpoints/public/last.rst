@@ -1,13 +1,13 @@
-Get last measurement for sensor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get last measurement for public sensor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. http:get:: /api/v1/sensors/(id)/measurements/last
+.. http:get:: /api/v1/public/sensors/(id)/measurements/last
 
     **Request**:
 
     .. sourcecode:: http
 
-        GET /api/v1/sensors/0028fcf0-9c90-11e8-8ee7-d12e1783ec90/measurements/last HTTP/1.1
+        GET /api/v1/public/sensors/0028fcf0-9c90-11e8-8ee7-d12e1783ec90/measurements/last HTTP/1.1
         Host: staging.sensorlab.io
         Accept: application/json
 
@@ -33,9 +33,40 @@ Get last measurement for sensor
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
-        Content-Type: text/plain
+        Content-Type: text/javascript
 
-        Unauthorized
+        {
+            "success": false,
+            "code": 401,
+            "message": "Unauthorized"
+        }
+
+    **Sensor not found response**
+
+    .. sourcecode:: http
+
+        HTTP/1.1 404 Not Found
+        Content-Type: text/javascript
+
+        {
+            "success": false,
+            "code": 404,
+            "message": "Sensor not found"
+        }
+
+    **Sensor is not public**
+
+    .. sourcecode:: http
+
+        HTTP/1.1 403 Forbidden
+        Content-Type: text/javascript
+
+        {
+            "success": false,
+            "code": 403,
+            "message": "Sensor measurements are not public"
+        }
+
 
     :query type: filter by type.
 
@@ -47,6 +78,8 @@ Get last measurement for sensor
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
+    :statuscode 404: Sensor is not found.
+    :statuscode 403: Sensor is not public.
 
 .. note::
     Available for:
