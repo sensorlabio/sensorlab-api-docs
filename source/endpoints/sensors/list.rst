@@ -58,6 +58,7 @@ Get sensors list
     :>json number batteryCharge: Sensor's battery charge in percent.
     :>json boolean isBatteryCharging: Indicates if battery is charging or not.
     :>json boolean isOnline: Indicates if sensor is online and sending data or not.
+    :>json boolean is_public: Show is sensor is public or not.
 
     :query page: used for pagination. Default is 1.
     :query name: filter by name. Search is case-insensitive and searches using `like`.

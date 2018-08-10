@@ -59,6 +59,7 @@ Update sensor
 
     :<json string name: Name for your sensor.
     :<json string application: Application's ID to connect sensor too.
+    :<json boolean is_public: Set sensor public or private (true or false).
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json
@@ -69,7 +70,9 @@ Update sensor
 
     **Possible validation errors and codes:**
 
-    - `code=1` - `Please, provide name field. This cannot be empty`.
+    - code=1 - field=name - Please, provide name field. This cannot be empty
+    - code=2 - field=application - `application` must be correct UUID format
+    - code=3 - field=is_public - `is_public` must be correct boolean format
 
 .. note::
     Available for:

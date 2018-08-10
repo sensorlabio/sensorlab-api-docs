@@ -46,6 +46,7 @@ Get single sensor
     :>json number batteryCharge: Sensor's battery charge in percent.
     :>json boolean isBatteryCharging: Indicates if battery is charging or not.
     :>json boolean isOnline: Indicates if sensor is online and sending data or not.
+    :>json boolean is_public: Show is sensor is public or not.
 
     :statuscode 200: No errors, will return result with sensors list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
