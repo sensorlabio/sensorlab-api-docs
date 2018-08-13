@@ -36,6 +36,9 @@ Change password
 
     .. sourcecode:: http
 
+        HTTP/1.1 422 OK
+        Content-type: application/json
+
         {
             "success": false,
             "code": 422,
@@ -65,8 +68,13 @@ Change password
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
+        Content-Type: applications/json
 
-        Unauthorized
+        {
+            "success": false,
+            "code": 401,
+            "message": "Unauthorized"
+        }
 
     :reqheader Authorization: "Bearer: {token}" from authentication.
     :reqheader Content-Type: application/json
@@ -76,11 +84,11 @@ Change password
 
     **Possible validation errors and codes:**
 
-    - `code=1` - `Please, provide name field. This cannot be empty`.
-    - `code=2` - `You must provide new password.`
-    - `code=3` - `You must provide new password check.`
-    - `code=4` - `Password is incorrect. Please provide you current password.`
-    - `code=5` - `Both "new password" and "new password check" values must be equal.`
+    - code=1 - field=old_password - Please, provide old password. This cannot be empty
+    - code=2 - field=new_password - You must provide new password
+    - code=3 - field=new_password_check - You must provide new password check
+    - code=4 - field=old_password - Password is incorrect. Please provide you current password
+    - code=5 - field=new_password_check - Both "new password" and "new password check" values must be equal
 
 .. note::
     Available for:

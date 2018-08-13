@@ -33,8 +33,13 @@ Get last measurement
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
+        Content-Type: applications/json
 
-        Unauthorized
+        {
+            "success": false,
+            "code": 401,
+            "message": "Unauthorized"
+        }
 
 
     :query sensor_id: Sensor's ID.
@@ -48,13 +53,12 @@ Get last measurement
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
-
     :statuscode 422: Validation error.
 
-       **Possible validation errors and codes:**
+    **Possible validation errors and codes:**
 
-        - `code=1` - `field=sensor_id` - `Please, provide sensor field. This cannot be empty.`.
-        - `code=2` - `field=sensor_id` - `This is not correct id format.`.
+        - code=1 - field=sensor_id - Please, provide sensor field. This cannot be empty
+        - code=2 - field=sensor_id - This is not correct id format
 
 .. note::
     Available for:

@@ -44,8 +44,13 @@ Get list of applications
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
+        Content-Type: applications/json
 
-        Unauthorized
+        {
+            "success": false,
+            "code": 401,
+            "message": "Unauthorized"
+        }
 
     :query page: used for pagination. Default is 1.
     :query name: search by name.

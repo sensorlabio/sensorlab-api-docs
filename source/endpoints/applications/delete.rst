@@ -29,8 +29,13 @@ Delete application
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
+        Content-Type: applications/json
 
-        Unauthorized
+        {
+            "success": false,
+            "code": 401,
+            "message": "Unauthorized"
+        }
 
     :reqheader Authorization: Bearer token from authentication.
     :reqheader Content-Type: application/json

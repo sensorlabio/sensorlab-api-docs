@@ -34,8 +34,13 @@ Update sensor
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
+        Content-Type: applications/json
 
-        Unauthorized
+        {
+            "success": false,
+            "code": 401,
+            "message": "Unauthorized"
+        }
 
     **Validation error response**
 

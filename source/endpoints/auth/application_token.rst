@@ -32,12 +32,42 @@ Get application authentication token
     .. sourcecode:: http
 
         HTTP/1.1 401 Unauthorized
-        Content-Type: text/plain
+        Content-Type: applications/json
 
-        Unauthorized
+        {
+            "success": false,
+            "code": 401,
+            "message": "Unauthorized"
+        }
+
+    **Validation error response**
+
+    .. sourcecode:: http
+
+        HTTP/1.1 422 OK
+        Content-type: application/json
+
+        {
+            "success": false,
+            "code": 422,
+            "message": "There are validation errors found.",
+            "errors": [
+                {
+                    "code": 1,
+                    "message": "Please, provide public api key. This cannot be empty.",
+                    "param": "public_api_key"
+                }
+            ]
+        }
 
     :reqheader Content-Type: application/json
     :statuscode 200: No errors.
     :statuscode 401: Wrong authorization credentials
+    :statuscode 422: Validation error.
+
+    **Possible validation errors and codes:**
+
+    - code=1 - field=public_api_key - Please, provide public api key. This cannot be empty
+    - code=2 - field=private_api_key - Please, provide private api key. This cannot be empty
 
 .. note:: Not every endpoint is available for application token. You will find more information in the endpoint description itself.
