@@ -8,3 +8,4 @@ REST API Endpoints
     applications/index
     sensors/index
     measurements/index
+    public/index
