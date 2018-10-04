@@ -6,4 +6,5 @@ Sensorlab.io REST API
     :caption: Contents:
     :glob:
 
+    basic/index
     endpoints/index

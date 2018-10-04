@@ -9,3 +9,4 @@ REST API Endpoints
     sensors/index
     measurements/index
     public/index
+    alerts/index

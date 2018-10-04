@@ -61,8 +61,8 @@ Get list of measurements
     :query type: filter by type.
 
     :>json string result.type: Measurement type.
-    :>json string result.value: Array of values.
-    :>json string result.timestamp: Timestamp for measurement.
+    :>json array result.value: Array of values.
+    :>json number result.timestamp: Timestamp for measurement.
     :>json string next: This param shows next measurement ID for next page. Use it with `next` query parameter.
     :>json string prev: This param shows prev measurement ID for prev page. Use it with `next` query parameter.
 
