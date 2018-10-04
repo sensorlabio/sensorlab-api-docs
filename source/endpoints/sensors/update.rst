@@ -29,39 +29,6 @@ Update sensor
             "message": "Sensor updated.",
         }
 
-    **Unauthorized response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 401 Unauthorized
-        Content-Type: applications/json
-
-        {
-            "success": false,
-            "code": 401,
-            "message": "Unauthorized"
-        }
-
-    **Validation error response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 422 OK
-        Content-type: application/json
-
-        {
-            "success": false,
-            "code": 422,
-            "message": "There are validation errors found.",
-            "errors": [
-                {
-                    "code": 1,
-                    "message": "Please, provide name field. This cannot be empty.",
-                    "param": "name"
-                }
-            ]
-        }
-
     :<json string name: Name for your sensor.
     :<json string application: Application's ID to connect sensor too.
     :<json boolean is_public: Set sensor public or private (true or false).

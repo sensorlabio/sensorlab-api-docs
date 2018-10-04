@@ -27,39 +27,6 @@ Get application authentication token
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YWJhMTY1ZTQ4MmJlYzJkZjg4N2M2YTMiLCJpYXQiOjE1MjIxNDY0MTYsImV4cCI6MTUyMjIzMjgxNn0.-6kJm1Rbd_SPbuwc6kg6FHuJnUii8FtKI9DXR0J5-Ig"
         }
 
-    **Unauthorized response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 401 Unauthorized
-        Content-Type: applications/json
-
-        {
-            "success": false,
-            "code": 401,
-            "message": "Unauthorized"
-        }
-
-    **Validation error response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 422 OK
-        Content-type: application/json
-
-        {
-            "success": false,
-            "code": 422,
-            "message": "There are validation errors found.",
-            "errors": [
-                {
-                    "code": 1,
-                    "message": "Please, provide public api key. This cannot be empty.",
-                    "param": "public_api_key"
-                }
-            ]
-        }
-
     :reqheader Content-Type: application/json
     :statuscode 200: No errors.
     :statuscode 401: Wrong authorization credentials

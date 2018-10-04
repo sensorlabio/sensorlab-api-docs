@@ -42,6 +42,21 @@ Example:
             "message": "Unauthorized"
         }
 
+- `403` - REST API returns this status if there's no access to the requested object (for example, sensor is not public and you are trying to access it using only public api key)
+
+Example:
+
+    .. sourcecode:: http
+
+        HTTP/1.1 403 Forbidden
+        Content-Type: text/javascript
+
+        {
+            "success": false,
+            "code": 403,
+            "message": "Sensor measurements are not public"
+        }
+
 - `404` - REST API will return this error if there's no requested endpoint or object for this endpoint doesn't exist.
 
 You can identify is it missing endpoint or object by parameter `type`.

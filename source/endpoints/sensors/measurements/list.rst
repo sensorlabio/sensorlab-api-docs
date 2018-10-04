@@ -43,19 +43,6 @@ Get measurements for sensor
             "prev": null
         }
 
-    **Unauthorized response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 401 Unauthorized
-        Content-Type: applications/json
-
-        {
-            "success": false,
-            "code": 401,
-            "message": "Unauthorized"
-        }
-
     :query next: Use `next` or `prev` fields from response to get next or previous page.
     :query type: filter by type.
 
@@ -72,7 +59,6 @@ Get measurements for sensor
     :reqheader Content-Type: application/json
     :statuscode 200: No errors, will return result with sensors list.
     :statuscode 401: User is not authorized - token is incorrect or outdated.
-
     :statuscode 422: Validation error.
 
     **Possible validation errors and codes:**

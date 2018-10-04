@@ -31,19 +31,6 @@ Generate new Private Api Key for application
             }
         }
 
-    **Unauthorized response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 401 Unauthorized
-        Content-Type: applications/json
-
-        {
-            "success": false,
-            "code": 401,
-            "message": "Unauthorized"
-        }
-
     :>json object application: Application data.
     :>json string application.id: Application ID.
     :>json string application.name: Application name.

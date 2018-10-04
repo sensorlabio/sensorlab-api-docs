@@ -28,19 +28,6 @@ Get last measurement for sensor
             "timestamp": 1533627864
         }
 
-    **Unauthorized response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 401 Unauthorized
-        Content-Type: applications/json
-
-        {
-            "success": false,
-            "code": 401,
-            "message": "Unauthorized"
-        }
-
     :query type: filter by type.
 
     :>json string type: Measurement type.

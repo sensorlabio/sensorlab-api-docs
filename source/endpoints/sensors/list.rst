@@ -43,19 +43,6 @@ Get sensors list
             "pages": 4
         }
 
-    **Unauthorized response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 401 Unauthorized
-        Content-Type: applications/json
-
-        {
-            "success": false,
-            "code": 401,
-            "message": "Unauthorized"
-        }
-
     :>json string id: Sensors's ID.
     :>json string imei: Sensor's IMEI.
     :>json string name: Sensor's name.

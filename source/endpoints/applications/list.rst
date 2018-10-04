@@ -39,19 +39,6 @@ Get list of applications
             "pages": 1
         }
 
-    **Unauthorized response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 401 Unauthorized
-        Content-Type: applications/json
-
-        {
-            "success": false,
-            "code": 401,
-            "message": "Unauthorized"
-        }
-
     :query page: used for pagination. Default is 1.
     :query name: search by name.
     :query sort: sorting parameter.

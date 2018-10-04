@@ -24,19 +24,6 @@ Get profile
             "email": "test@test.com"
         }
 
-    **Unauthorized response**
-
-    .. sourcecode:: http
-
-        HTTP/1.1 401 Unauthorized
-        Content-Type: applications/json
-
-        {
-            "success": false,
-            "code": 401,
-            "message": "Unauthorized"
-        }
-
     :reqheader Authorization: "Bearer: {token}" from authentication.
     :reqheader Content-Type: application/json
     :statuscode 200: No errors.
