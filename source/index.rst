@@ -1,10 +1,9 @@
-Sensorlab.io REST API
-=====================
+Sensorlab.io REST API and Websockets
+====================================
 
 .. toctree::
     :maxdepth: 3
-    :caption: Contents:
     :glob:
 
-    basic/index
-    endpoints/index
+    rest/index
+    websockets/index
