@@ -58,6 +58,12 @@ To leave room use this code:
     let sensor = '7e9fb090-c717-11e8-b4d3-c587309ce935';
     socket.emit('sensor/disconnect', { sensor: sensor});
 
+To leave all rooms:
+
+.. code-block:: javascript
+
+    sensor/disconnect/all
+
 You can also leave all rooms at once:
 
 .. code-block:: javascript
