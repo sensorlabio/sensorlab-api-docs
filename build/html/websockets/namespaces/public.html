@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Public measurements namespace &mdash; Sensorlab.io API  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Alerts namespace" href="alerts.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sensorlab.io API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../rest/index.html">Sensorlab.io REST API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sensorlab.io Websockets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basic/index.html">Basic Information</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Websockets namespaces</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="measurements.html">Measurements namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alerts.html">Alerts namespace</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Public measurements namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sensorlab.io API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sensorlab.io Websockets</a> &raquo;</li>
+        
+          <li><a href="index.html">Websockets namespaces</a> &raquo;</li>
+        
+      <li>Public measurements namespace</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/websockets/namespaces/public.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="public-measurements-namespace">
+<h1>Public measurements namespace<a class="headerlink" href="#public-measurements-namespace" title="Permalink to this headline">¶</a></h1>
+<p>You can receive measurements from public sensors using websockets.</p>
+<p>In order to connect to websockets you should get public api key for your application.</p>
+<p>When you have token you can connect to /measurements namespace:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;socket.io-client&#39;</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">(</span><span class="s1">&#39;https://ws.test.sensorlab.io:8080/public?token=&#39;</span><span class="o">+</span><span class="nx">token</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/ws&#39;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>If your public api key is invalid, you will receive an error. You can catch it like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">reason</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">reject</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">reason</span><span class="p">));</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Unable to connect Socket.IO&#39;</span><span class="p">,</span> <span class="nx">reason</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>You will receive error like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nx">code</span><span class="o">:</span> <span class="mi">401</span><span class="p">,</span> <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Authentication error. Please check your token.&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>When connected, you can join sensor rooms. There are 2 types of rooms:</p>
+<ul class="simple">
+<li><p>measurements for sensor</p></li>
+<li><p>measurements by type for sensor</p></li>
+</ul>
+<p>Connect sensor room:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">sensor</span> <span class="o">=</span> <span class="s1">&#39;7e9fb090-c717-11e8-b4d3-c587309ce935&#39;</span><span class="p">;</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sensor&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">sensor</span><span class="o">:</span> <span class="nx">sensor</span><span class="p">});</span>
+</pre></div>
+</div>
+<p>Connect sensor/type room:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">sensor</span> <span class="o">=</span> <span class="s1">&#39;7e9fb090-c717-11e8-b4d3-c587309ce935&#39;</span><span class="p">;</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sensor&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">sensor</span><span class="o">:</span> <span class="nx">sensor</span><span class="p">,</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;TMP&#39;</span><span class="p">});</span>
+</pre></div>
+</div>
+<p>To leave room use this code:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">sensor</span> <span class="o">=</span> <span class="s1">&#39;7e9fb090-c717-11e8-b4d3-c587309ce935&#39;</span><span class="p">;</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sensor/disconnect&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">sensor</span><span class="o">:</span> <span class="nx">sensor</span><span class="p">});</span>
+</pre></div>
+</div>
+<p>And to leave sensor/type room:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">sensor</span> <span class="o">=</span> <span class="s1">&#39;7e9fb090-c717-11e8-b4d3-c587309ce935&#39;</span><span class="p">;</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sensor/disconnect&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">sensor</span><span class="o">:</span> <span class="nx">sensor</span><span class="p">,</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;TMP&#39;</span><span class="p">});</span>
+</pre></div>
+</div>
+<p>You can also leave all rooms at once:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sensor/disconnect/all&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If user/application with this token doesn’t have rights to the sensor or sensor is not public, a “sensor/access_denied” message will be emitted.</p>
+<p>You can catch this message like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sensor/access_denied&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">sensor</span><span class="p">,</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>If there are no problems server will start emitting measurements and you can receive them with your client:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">sensor</span> <span class="o">=</span> <span class="s1">&#39;7e9fb090-c717-11e8-b4d3-c587309ce935&#39;</span><span class="p">;</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;measurements/&#39;</span> <span class="o">+</span> <span class="nx">sensor</span><span class="p">,</span> <span class="p">(</span><span class="nx">measurements</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">measurements</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">measurement</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">measurement</span><span class="p">.</span><span class="nx">timestamp</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">measurement</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">measurement</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>To receive measurements from sensor/type room use this code:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">sensor</span> <span class="o">=</span> <span class="s1">&#39;7e9fb090-c717-11e8-b4d3-c587309ce935&#39;</span><span class="p">;</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;measurements/&#39;</span> <span class="o">+</span> <span class="nx">sensor</span> <span class="o">+</span> <span class="s1">&#39;/TMP&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">measurements</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">measurements</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">measurement</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">measurement</span><span class="p">.</span><span class="nx">timestamp</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">measurement</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">measurement</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="alerts.html" class="btn btn-neutral float-left" title="Alerts namespace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sensorlab.io
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Update sensor alert configuration &mdash; Sensorlab.io API  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Get last generated alerts for sensor" href="last.html" />
+    <link rel="prev" title="Delete sensor alert configuration" href="delete.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Sensorlab.io API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Sensorlab.io REST API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../basic/index.html">Basic information</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">REST API Endpoints</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../auth/index.html">Authentication endpoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../profile/index.html">Profile endpoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../applications/index.html">Applications endpoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sensors/index.html">Sensors Endpoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../measurements/index.html">Measurements endpoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../public/index.html">Measurements for public sensor endpoints</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Sensor alerts endpoints</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="create.html">Create sensor alert configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="list.html">List sensor alerts configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="get.html">Get sensor alert configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="delete.html">Delete sensor alert configuration</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Update sensor alert configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="last.html">Get last generated alerts for sensor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../websockets/index.html">Sensorlab.io Websockets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Sensorlab.io API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Sensorlab.io REST API</a> &raquo;</li>
+        
+          <li><a href="../index.html">REST API Endpoints</a> &raquo;</li>
+        
+          <li><a href="index.html">Sensor alerts endpoints</a> &raquo;</li>
+        
+      <li>Update sensor alert configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/rest/endpoints/alerts/update.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="update-sensor-alert-configuration">
+<h1>Update sensor alert configuration<a class="headerlink" href="#update-sensor-alert-configuration" title="Permalink to this headline">¶</a></h1>
+<dl class="http patch">
+<dt id="patch--api-v1-sensor-(sensor)-alerts-(id)">
+<code class="sig-name descname">PATCH </code><code class="sig-name descname">/api/v1/sensor/</code><span class="sig-paren">(</span><em class="sig-param">sensor</em><span class="sig-paren">)</span><code class="sig-name descname">/alerts/</code><span class="sig-paren">(</span><em class="sig-param">id</em><span class="sig-paren">)</span><a class="headerlink" href="#patch--api-v1-sensor-(sensor)-alerts-(id)" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Request</strong>:</p>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">PATCH</span> <span class="nn">/api/v1/sensor/8dbc5460-9a18-11e8-9eb6-529269fb1459/alerts/6cc44ad0-c635-11e8-bf95-1dddf61566fa</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">staging.sensorlab.io</span>
+<span class="na">Content-type</span><span class="o">:</span> <span class="l">application/json</span>
+
+<span class="p">{</span>
+    <span class="nt">&quot;threshold_type&quot;</span><span class="p">:</span> <span class="s2">&quot;min&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;measurement_type&quot;</span><span class="p">:</span> <span class="s2">&quot;HUM&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;threshold_value&quot;</span><span class="p">:</span> <span class="mf">65.25</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Success response</strong>:</p>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-type</span><span class="o">:</span> <span class="l">application/json</span>
+
+<span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Sensor alert updated&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Example request with threhsold_type=loc</strong>:</p>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">PATCH</span> <span class="nn">/api/v1/sensor/8dbc5460-9a18-11e8-9eb6-529269fb1459/alerts/6cc44ad0-c635-11e8-bf95-1dddf61566fa</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">staging.sensorlab.io</span>
+<span class="na">Content-type</span><span class="o">:</span> <span class="l">application/json</span>
+
+<span class="p">{</span>
+    <span class="nt">&quot;threshold_type&quot;</span><span class="p">:</span> <span class="s2">&quot;loc&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;measurement_type&quot;</span><span class="p">:</span> <span class="s2">&quot;LOC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;threshold_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;lat&quot;</span><span class="p">:</span> <span class="mf">36.1812440939046</span><span class="p">,</span>
+        <span class="nt">&quot;lng&quot;</span><span class="p">:</span> <span class="mf">-101.84828589116029</span><span class="p">,</span>
+        <span class="nt">&quot;radius&quot;</span><span class="p">:</span> <span class="mi">1000</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Success response</strong>:</p>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-type</span><span class="o">:</span> <span class="l">application/json</span>
+
+<span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Sensor alert updated&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Request JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold_type</strong> (<em>string</em>) – <p>Threshold type.</p>
+<p>Possible values:</p>
+<ul>
+<li><p><cite>min</cite> - set minimum value and alert will be generated if value from sensor will be lower than this value</p></li>
+<li><p><cite>max</cite> - set maximum value and alert will be generated if value from sensor will be higher than this value</p></li>
+<li><p><cite>loc</cite> - threshold type for GPS coordinates. If location is out of radius from specified point - alert will be generated</p></li>
+</ul>
+</p></li>
+<li><p><strong>measurement_type</strong> (<em>string</em>) – Measurement type to check.</p></li>
+<li><p><strong>threshold_value</strong> (<em>string</em>) – <p>Threshold value to compare to.</p>
+<p>This parameter depends on the threshold_type.</p>
+<ul>
+<li><p>for type <cite>min</cite> value should be a number.</p></li>
+<li><p>for type <cite>max</cite> value should be a number.</p></li>
+<li><p>for type <cite>loc</cite> value should be a JSON object with lat, lng and radius parameters. Example: {lat: 36.1812440939046, lng: -101.84828589116029, radius: 1000}</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request Headers</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.2">Authorization</a> – Bearer token from authentication.</p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> – application/json</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Status Codes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No errors, will return result with sensor_alert.</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2">401 Unauthorized</a> – User is not authorized - token is incorrect or outdated.</p></li>
+<li><p><a class="reference external" href="http://tools.ietf.org/html/rfc4918#section-11.2">422 Unprocessable Entity</a> – Validation error.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Possible validation errors and codes:</strong></p>
+<ul class="simple">
+<li><p>code=2 - field=sensor - <cite>sensor</cite> field should be a correct UUID format</p></li>
+<li><p>code=4 - field=id - <cite>id</cite> field should be a correct UUID format</p></li>
+<li><p>code=5 - field=threshold_type - <cite>threshold_type</cite> is required</p></li>
+<li><p>code=6 - field=threshold_type - <cite>threshold_type</cite> must be <cite>min</cite>, <cite>max</cite> or <cite>loc</cite></p></li>
+<li><p>code=7 - field=measurement_type - <cite>measurement_type</cite> is required</p></li>
+<li><p>code=8 - field=threshold_value - <cite>threshold_value</cite> is required</p></li>
+<li><p>code=9 - field=threshold_value - <cite>threshold_value</cite> for <cite>threshold_type</cite> “min” must be a correct float</p></li>
+<li><p>code=10 - field=threshold_value - <cite>threshold_value</cite> for <cite>threshold_type</cite> “max” must be a correct float</p></li>
+<li><p>code=11 - field=threshold_value - <cite>threshold_value</cite> for <cite>threshold_type</cite> “loc” must be a correct JSON object with <cite>lat</cite>, <cite>lng</cite> and <cite>radius</cite> parameters</p></li>
+<li><p>code=12 - field=threshold_value - <cite>threshold_value.lat</cite> must be correct latitude</p></li>
+<li><p>code=13 - field=threshold_value - <cite>threshold_value.lng</cite> must be correct longitude</p></li>
+<li><p>code=14 - field=threshold_value - <cite>threshold_value.radius</cite> must be correct positive integer</p></li>
+</ul>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available for:</p>
+<ul class="simple">
+<li><p>User token</p></li>
+<li><p>Application token</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="last.html" class="btn btn-neutral float-right" title="Get last generated alerts for sensor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="delete.html" class="btn btn-neutral float-left" title="Delete sensor alert configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sensorlab.io
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

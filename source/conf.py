@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Sensorlab.io API'
-copyright = u'2018, Sensorlab.io'
+copyright = u'2020, Sensorlab.io'
 author = u'Sensorlab.io'
 
 # The short X.Y version
